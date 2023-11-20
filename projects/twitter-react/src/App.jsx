@@ -8,14 +8,36 @@ export default function App() {
         - El elemento es lo que renderiza React.
      */
 
+    const users = [
+        {
+            userName: 'Acho_yo',
+            name: 'Juan Valera Reales',
+            isFollowing: true
+        },
+        {
+            userName: 'JesusValera96',
+            name: 'Jesús Valera Reales',
+            isFollowing: false
+        },
+        {
+            userName: 'Chemaclass',
+            name: 'José María Valera Reales',
+            isFollowing: false
+        },
+
+
+    ]
+
     return (
         <section className={"App"}>
-            <TwitterFollowCard userName={"Acho_yo"} name={"Juan Valera Reales"}
-                               isFollowing/>
-            <TwitterFollowCard userName={"Chemaclass"} name={"José María Valera Reales"}
-                               isFollowing={false}/>
-            <TwitterFollowCard userName={"JesusValera96"} name={"Jesús Valera Reales"}
-                               isFollowing/>
+            {
+                users.map(({userName, name, isFollowing}) => (
+                        <TwitterFollowCard key={userName} userName={userName} initialIsFollowing={isFollowing}>
+                            {name}
+                        </TwitterFollowCard>
+                    )
+                )
+            }
         </section>
     )
 }

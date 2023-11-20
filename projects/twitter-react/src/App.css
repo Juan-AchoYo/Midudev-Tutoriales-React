@@ -39,7 +39,7 @@
 }
 
 .tw-followCard-button:hover {
-    opacity: .8;
+    background-color: #09f;
 }
 
 .tw-followCard-text {
@@ -57,7 +57,7 @@
     background-color: rgba(255, 0, 0, 0.178);
     color: red;
     border: 1px solid red;
-    transition: .3s ease all;
+    transition: .3s ease background-color;
     opacity: 1;
 }
 
